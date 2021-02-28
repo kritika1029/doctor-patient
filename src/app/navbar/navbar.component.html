@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="#"><h3><b>Keysight MedNet</b></h3></a>
+    
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+    aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav w-100">
+        
+        <li class="nav-item">
+         <a class="nav-link btn text-dark" routerLink="/home"><b> HOME </b></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link btn text-dark" routerLink=""><b> ABOUT US </b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn text-dark" routerLink=""><b> TEAM </b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn text-dark" routerLink=""><b> NEWS AND EVENTS </b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn text-dark" routerLink=""><b></b></a>
+        </li>
+
+        
+        <li class="nav-item ml-auto right">
+          <a class="nav-link btn text-dark" routerLink="/login"><b> LOGIN  </b></a>
+        </li>
+      
+        <!--
+        <li class="nav-item">          
+          <div ngbDropdown class="d-inline-block">
+            <a class="btn nav-link" id="dropdownBasic1" ngbDropdownToggle><b>dd</b></a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem  routerLink="">dfd</button>
+              <button ngbDropdownItem routerLink="">jhj</button>
+              <button ngbDropdownItem routerLink="">jhj</button>
+            </div>
+          </div>
+        
+        </li>
+    ->
+    2nd type: 
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" 
+        data-toggle="dropdown"
+         aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Submenu</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                            <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
+                            <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+  -->
+     
+      </ul>
+      
+    </div>
+  </nav>

@@ -1,0 +1,37 @@
+  
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+.background
+{ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100%;
+  background-image: url(../../assets/images/bg1.jpg);
+  background-blend-mode: screen;
+  position: fixed;
+  background-position: center;
+}
+
+.center {
+  height: 200px;
+  width: 400px;    
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 210px;
+  margin-left: -190px;
+}
+.text
+{
+  margin-left: 270px;
+  position: fixed;
+  text-align: center;
+  color:black;
+  font-family: 'Tangerine'; 
+  font-size: 150px;
+  text-shadow: 10px 10px 10px rgb(66, 65, 65);
+  margin-top: 50px;
+}
