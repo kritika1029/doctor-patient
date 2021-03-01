@@ -28,12 +28,15 @@
                   <div class="container">
                     <div>
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname"  class="form-control" required ngModel #uname="ngModel">
+                    <input type="text" placeholder="Enter Username" name="uname"  class="form-control" required [(ngModel)]="uname">
               
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw"  class="form-control" required ngModel #psw="ngModel">
+                    <input type="password" placeholder="Enter Password" name="psw"  class="form-control" required [(ngModel)]="psw">
                       
-                    <button type="submit" routerLink="/welcome" [disabled]="(!psw.valid || !uname.valid)" >Login</button>
+                    <!--<button type="submit" routerLink="/welcome" [disabled]="(!psw.valid || !uname.valid)" >Login</button>-->
+                    <button type="button" (click)="loginCheck()">
+                      Login
+                    </button>
                     <label>
                       <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>

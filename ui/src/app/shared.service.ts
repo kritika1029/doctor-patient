@@ -12,27 +12,27 @@ export class SharedService {
   constructor(private http: HttpClient) { }
 
   docLogin(val: any): Observable<any> {
-    return this.http.get<any>(this.APIUrl + '/Dcotor/login', val);
+    return this.http.get<any>(this.APIUrl + '/Doctor/login', val);
   }
 
   updateDoc(val: any): Observable<any> {
-    return this.http.put<any>(this.APIUrl + '/Dcotor', val);
+    return this.http.put<any>(this.APIUrl + '/Doctor', val);
   }
 
   addDoc(val: any): Observable<any> {
-    return this.http.post<any>(this.APIUrl + '/Dcotor', val);
+    return this.http.post<any>(this.APIUrl + '/Doctor', val);
   }
 
   getDocById(val: any): Observable<any> {
-    return this.http.get<any>(this.APIUrl + '/Dcotor/id', val);
+    return this.http.get<any>(this.APIUrl + '/Doctor/id', val);
   }
 
   getDocByField(val: any): Observable<any> {
-    return this.http.get<any>(this.APIUrl + '/Dcotor/field', val);
+    return this.http.get<any>(this.APIUrl + '/Doctor/field', val);
   }
 
   getFieldList(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + '/Dcotor/fieldlist');
+    return this.http.get<any>(this.APIUrl + '/Doctor/fieldlist');
   }
 
   patientLogin(val: any): Observable<any> {
