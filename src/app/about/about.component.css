@@ -1,0 +1,24 @@
+.bg{
+    background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)),url(../../assets/images/about-bg.jfif);
+    margin: 0px;
+    padding: 0px;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.imgwid{
+    height: 400px;
+    width: 400px;
+}
+.wid{
+    width: 600px;
+}
+.wid2{
+    width: 200px;
+}
+.mar{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   
+}

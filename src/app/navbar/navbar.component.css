@@ -1,6 +1,6 @@
 .navbar
 {   
-    background-color: rgba(141, 199, 223,0.5);
+    background-color: rgba(250, 68, 68, 0.5);
 
 }
 .right
@@ -10,4 +10,8 @@
 .text-dark
 {
     font-size:large;
+}
+.logo{
+    width: 40px;
+    height: 40px;
 }

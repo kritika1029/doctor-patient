@@ -10,6 +10,9 @@ import { CardsComponent } from './cards/cards.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { LoginComponent } from './login/login.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
     CardsComponent,
     SlideshowComponent,
     LoginComponent,
-    FirstpageComponent
+    FirstpageComponent,
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]

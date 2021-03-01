@@ -1,7 +1,7 @@
 ngb-carousel .wrapper {
     position: relative;
     height: 75%;
-    padding-top: 39%; /* Keep ratio for 900x500 images */
+    padding-top: 39.5%; /* Keep ratio for 900x500 images */
     
 
   }
