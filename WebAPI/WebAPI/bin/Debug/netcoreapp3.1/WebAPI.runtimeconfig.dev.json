@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\rsinghal.KEYSIGHT\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\rsinghal.KEYSIGHT\\.nuget\\packages"
+    ]
+  }
+}
