@@ -13,6 +13,8 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
+import { SharedService } from './shared.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [NgbCarouselConfig],
+  providers: [NgbCarouselConfig, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
