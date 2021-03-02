@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedService } from 'src/app/shared.service'
 
 @Component({
@@ -7,11 +8,30 @@ import { SharedService } from 'src/app/shared.service'
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  uname: any;
-  psw: any;
+  
   dataList: any;
+  
+  
 
-  constructor(private service:SharedService) { }
+  constructor(private service:SharedService) { 
+
+    
+  
+  }
+
+  form=new FormGroup({
+    uname:new FormControl('',Validators.required),
+    psw:new FormControl('',Validators.required),
+ });
+
+ get uname()
+      {
+        return this.form.get('uname');
+      }
+      get psw()
+      {
+        return this.form.get('psw');
+      }
 
 
   ngOnInit(): void {
@@ -38,4 +58,9 @@ export class CardsComponent implements OnInit {
       }
     )
   }
+
+  submit(form1 :{value:any;}) {
+    console.log(form1.value);
+  }
+
 }

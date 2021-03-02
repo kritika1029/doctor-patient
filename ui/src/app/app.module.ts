@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -33,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [NgbCarouselConfig, SharedService],
   bootstrap: [AppComponent]

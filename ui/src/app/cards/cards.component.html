@@ -19,7 +19,7 @@
 
             <div id="id01" class="modal">
   
-                <form class="modal-content animate" action="" method="post">
+                <form class="modal-content animate" name="form1" #form1="ngForm" [formGroup]="form" (ngSubmit)="submit(form1)">
                   <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="../../assets/images/avatar.png" alt="Avatar" class="avatar">
@@ -28,13 +28,13 @@
                   <div class="container">
                     <div>
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname"  class="form-control" required [(ngModel)]="uname">
+                    <input type="text" placeholder="Enter Username" name="uname"  class="form-control" formControlName="uname">
               
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw"  class="form-control" required [(ngModel)]="psw">
+                    <input type="password" placeholder="Enter Password" name="psw"  class="form-control" formControlName="psw">
                       
                     <!--<button type="submit" routerLink="/welcome" [disabled]="(!psw.valid || !uname.valid)" >Login</button>-->
-                    <button type="button" (click)="loginCheck()">
+                    <button type="submit">
                       Login
                     </button>
                     <label>
@@ -47,6 +47,7 @@
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                     <span class="psw">Forgot <a href="#">password?</a></span>
                   </div>
+                  <div>{{form1.value|json}}</div>
                 </form>
               </div>
         
