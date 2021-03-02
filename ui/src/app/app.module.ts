@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [NgbCarouselConfig, SharedService],
+  providers: [NgbCarouselConfig, SharedService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

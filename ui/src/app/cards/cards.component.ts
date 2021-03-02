@@ -1,29 +1,26 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedService } from 'src/app/shared.service'
-
+import { LoginService } from '../login.service';
 @Component({
   selector: 'cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  
-  dataList: any;
+  public details: import("c:/Users/kritiaro/angular/doctor/ui/src/app/doctor").IDoctor[] | undefined;
   
   
 
-  constructor(private service:SharedService) { 
+  constructor(private _services:LoginService) { 
 
-    
-  
   }
 
   form=new FormGroup({
     uname:new FormControl('',Validators.required),
     psw:new FormControl('',Validators.required),
  });
-
+ 
  get uname()
       {
         return this.form.get('uname');
@@ -34,29 +31,9 @@ export class CardsComponent implements OnInit {
       }
 
 
-  ngOnInit(): void {
-  }
-
-  loginCheck() {
-    var val = {
-      DocEmail: this.uname,
-      DocPassword: this.psw
-    };
-
-    this.service.docLogin(val).subscribe(response => {
-      this.dataList = Array.from(Object.keys(response), k => response[k]);
-      console.log(this.dataList);
-    },
-      (error: Response) => {
-        if (error.status === 404) {
-          alert('No data found.');
-        }
-        else {
-          alert('An unexpected error occured.');
-          console.log(error);
-        }
-      }
-    )
+  ngOnInit(){
+    this._services.getDoctor()
+    .subscribe(data => this.details = data);
   }
 
   submit(form1 :{value:any;}) {

@@ -55,7 +55,11 @@
             onclick="document.getElementById('id01').style.display='block'">
             
                 <div class="music">
-                <span class="text-center"><b>ADMIN</b></span>
+                <span class="text-center"><b>
+                  <ul *ngFor="let doc of details">
+                    <li> {{doc.name}} </li>
+                  </ul>
+                </b></span>
                 </div></div>
         </div>
     </div>
