@@ -6663,11 +6663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\doctor-patient\\WebAPI\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\doctor-patient\\WebAPI\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\rsinghal.KEYSIGHT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\WebAPI\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\rsinghal.KEYSIGHT\\Desktop\\doctor-patient\\WebAPI\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rsinghal.KEYSIGHT\\AppData\\Roaming\\NuGet\\NuGet.Config",
