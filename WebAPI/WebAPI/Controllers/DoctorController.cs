@@ -26,14 +26,14 @@ namespace API.Controllers
             _env = env;
         }
 
-        [Route("login")]
-        [HttpGet]
-        public JsonResult Get(Doctor doc)
+        //[Route("login")]
+        [HttpGet("{email}/{password}")]
+        public JsonResult Get(string email, string password)
         {
             string query = @" select * from dbo.DoctorDB where DocEmail = '"
-                + doc.DocEmail
+                + email
                 + @"'and DocPassword = '"
-                + doc.DocPassword
+                + password
                 + @"'";
 
             DataTable table = new DataTable();
