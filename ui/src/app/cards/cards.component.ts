@@ -3,13 +3,14 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared.service'
 import { LoginService } from '../login.service';
+
 @Component({
   selector: 'cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  public details: import("c:/Users/kritiaro/angular/doctor/ui/src/app/doctor").IDoctor[] | undefined;
+  public details: import("src/app/doctor").IDoctor[] | undefined;
   public person:string="";
   
 
@@ -26,7 +27,7 @@ export class CardsComponent implements OnInit {
       {
         return this.form.get('uname');
       }
-      get psw()
+  get psw()
       {
         return this.form.get('psw');
       }
