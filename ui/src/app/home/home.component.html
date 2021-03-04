@@ -3,12 +3,30 @@
     <b>Welcome to Keysight 
       <br>MedNet</b>
   </div>
-      <div class="center">
+      
+      <!--
+      <div class="center d-inline-block" *ngFor="let s of show">
         
       <input type="text" class="" placeholder="Search" class="form-control">
       <br>
       
       <button type="button" class="btn btn-dark" routerLink="">SEARCH</button>
-    
+        
+        <button type="button" class="btn btn-dark" routerLink="">{{s.title}}</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
     </div>
+-->
+    <div class="center block d-inline-block" *ngFor="let s of show">
+            
+            <div  class="space d-inline-block"></div>
+
+            <div class="music shadow-lg  d-inline-block" routerLink="{{s.url}}">
+            <span class="text-center" ><b>{{s.title}}</b></span>
+            </div>
+
+            
+        </div>
+        <router-outlet></router-outlet>
   </div>
+

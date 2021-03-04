@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './login.service';
+import { SearchPatientsComponent } from './search-patients/search-patients.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginService } from './login.service';
     LoginComponent,
     FirstpageComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    SearchPatientsComponent
   ],
   imports: [
     BrowserModule,

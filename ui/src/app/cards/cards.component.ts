@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared.service'
 import { LoginService } from '../login.service';
 @Component({
@@ -9,10 +10,10 @@ import { LoginService } from '../login.service';
 })
 export class CardsComponent implements OnInit {
   public details: import("c:/Users/kritiaro/angular/doctor/ui/src/app/doctor").IDoctor[] | undefined;
-  
+  public person:string="";
   
 
-  constructor(private _services:LoginService) { 
+  constructor(private _router: Router,private _services:LoginService) { 
 
   }
 
@@ -30,14 +31,30 @@ export class CardsComponent implements OnInit {
         return this.form.get('psw');
       }
 
+      change1(){
+
+        this.person = 'doctor';
+      }
+    
+      change2(){
+        this.person = 'patient';
+      }
+    
 
   ngOnInit(){
     this._services.getDoctor()
     .subscribe(data => this.details = data);
+
+
+    
   }
 
   submit(form1 :{value:any;}) {
     console.log(form1.value);
+    console.log(this.person);
+    this._router.navigate(['/welcome'],{
+      queryParams: {'person':this.person }
+    });
   }
-
+  
 }
